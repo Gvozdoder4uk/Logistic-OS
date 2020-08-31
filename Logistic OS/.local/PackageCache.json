@@ -2,24 +2,35 @@
   "Packages": [
     {
       "Package": {
+        "Id": "Microsoft.Activities.Extensions",
+        "Version": "2.0.6.9"
+      },
+      "Assemblies": [
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.dll"
+      ],
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9"
+    },
+    {
+      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.9.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\closedxml/0.87.1\\lib/net40/ClosedXML.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.visualstudio.ole.interop/7.10.6071\\lib/Microsoft.VisualStudio.OLE.Interop.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OOXML.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXml4Net.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXmlFormats.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\sharpziplib/1.2.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.excel.activities/2.9.0-preview\\lib/net461/UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.excel.activities/2.9.0-preview\\lib/net461/UiPath.Excel.Activities.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.excel.activities/2.9.0-preview\\lib/net461/UiPath.Excel.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\closedxml/0.87.1\\lib/net40/ClosedXML.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.visualstudio.ole.interop/7.10.6071\\lib/Microsoft.VisualStudio.OLE.Interop.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OOXML.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXml4Net.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\sharpziplib/1.2.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities/2.9.0-preview\\lib/net461/UiPath.Excel.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities/2.9.0-preview\\lib/net461/UiPath.Excel.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities/2.9.0-preview\\lib/net461/UiPath.Excel.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview"
     },
     {
       "Package": {
@@ -27,19 +38,19 @@
         "Version": "1.9.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\bouncycastle/1.8.5\\lib/BouncyCastle.Crypto.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\interop.domino.dll/1.0.0\\lib/Interop.Domino.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.Auth.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.identity.client/4.14.0\\lib/net45/Microsoft.Identity.Client.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/MailKit.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/MimeKit.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/UiPath.Mail.Activities.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/UiPath.Mail.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\bouncycastle/1.8.5\\lib/BouncyCastle.Crypto.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\interop.domino.dll/1.0.0\\lib/Interop.Domino.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.Auth.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.exchange.webservices/2.2.0\\lib/40/Microsoft.Exchange.WebServices.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.identity.client/4.14.0\\lib/net45/Microsoft.Identity.Client.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/MailKit.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/MimeKit.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/UiPath.Mail.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/UiPath.Mail.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview"
     },
     {
       "Package": {
@@ -47,25 +58,25 @@
         "Version": "20.6.1-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.aspnet.signalr.client/2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.rest.clientruntime/2.3.21\\lib/net461/Microsoft.Rest.ClientRuntime.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\sharpziplib/1.2.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Text.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/UiPath.OrchestratorClient.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/UiPath.System.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/UiPath.System.Activities.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.aspnet.signalr.client/2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.rest.clientruntime/2.3.21\\lib/net461/Microsoft.Rest.ClientRuntime.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\sharpziplib/1.2.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/UiPath.OrchestratorClient.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/UiPath.System.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/UiPath.System.Activities.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview"
     },
     {
       "Package": {
@@ -73,59 +84,48 @@
         "Version": "20.6.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\system.threading.tasks.dataflow/4.10.0\\lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath/20.6.7473.25550-preview\\lib/UiPath.Interop.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.ocr.contracts/2.6.0\\lib/net461/UiPath.OCR.Contracts.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.platform/20.4.0\\lib/net461/UiPath.Platform.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.telemetry.client/1.2.20\\lib/net461/TelemetryClient.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Text.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.CV.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.CV.Activities.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.CV.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.UiAutomation.Activities.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.Wizards.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.AzureComputerVision.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.Core.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.GoogleCloud.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.Microsoft.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.MicrosoftCloud.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.Tesseract.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.threading.tasks.dataflow/4.10.0\\lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath/20.6.7473.25550-preview\\lib/UiPath.Interop.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.ocr.contracts/2.6.0\\lib/net461/UiPath.OCR.Contracts.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.platform/20.4.0\\lib/net461/UiPath.Platform.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.telemetry.client/1.2.20\\lib/net461/TelemetryClient.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.CV.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.CV.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities/20.6.0-preview\\lib/net461/UiPath.Wizards.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.AzureComputerVision.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.Core.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.GoogleCloud.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.Microsoft.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.MicrosoftCloud.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview"
-    },
-    {
-      "Package": {
-        "Id": "Microsoft.Activities.Extensions",
-        "Version": "2.0.6.9"
-      },
-      "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.dll"
-      ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview"
     }
   ],
   "Conflicts": [],
@@ -442,9 +442,9 @@
         "Version": "5.0.3"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\avalonedit\\5.0.3\\lib\\Net40\\ICSharpCode.AvalonEdit.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\avalonedit\\5.0.3\\lib\\Net40\\ICSharpCode.AvalonEdit.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\avalonedit\\5.0.3"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\avalonedit\\5.0.3"
     },
     {
       "Package": {
@@ -452,9 +452,9 @@
         "Version": "1.8.5"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\bouncycastle\\1.8.5\\lib\\BouncyCastle.Crypto.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\bouncycastle\\1.8.5\\lib\\BouncyCastle.Crypto.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\bouncycastle\\1.8.5"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\bouncycastle\\1.8.5"
     },
     {
       "Package": {
@@ -462,9 +462,9 @@
         "Version": "0.87.1"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\closedxml\\0.87.1\\lib\\net40\\ClosedXML.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\closedxml\\0.87.1\\lib\\net40\\ClosedXML.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\closedxml\\0.87.1"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\closedxml\\0.87.1"
     },
     {
       "Package": {
@@ -472,9 +472,9 @@
         "Version": "2.13.5"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\csvhelper\\2.13.5\\lib\\net40-client\\CsvHelper.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\csvhelper\\2.13.5\\lib\\net40-client\\CsvHelper.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\csvhelper\\2.13.5"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\csvhelper\\2.13.5"
     },
     {
       "Package": {
@@ -482,9 +482,9 @@
         "Version": "2.5.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\documentformat.openxml\\2.5.0\\lib\\DocumentFormat.OpenXml.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\documentformat.openxml\\2.5.0\\lib\\DocumentFormat.OpenXml.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\documentformat.openxml\\2.5.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\documentformat.openxml\\2.5.0"
     },
     {
       "Package": {
@@ -492,14 +492,14 @@
         "Version": "2.8.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.Aero.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.Metro.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.DataGrid.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.Toolkit.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.Aero.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.Metro.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.AvalonDock.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.DataGrid.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\lib\\net40\\Xceed.Wpf.Toolkit.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0"
     },
     {
       "Package": {
@@ -507,9 +507,9 @@
         "Version": "2.4.2"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\humanizer.core\\2.4.2\\lib\\netstandard2.0\\Humanizer.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\humanizer.core\\2.4.2\\lib\\netstandard2.0\\Humanizer.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\humanizer.core\\2.4.2"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\humanizer.core\\2.4.2"
     },
     {
       "Package": {
@@ -517,9 +517,9 @@
         "Version": "1.0.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\interop.domino.dll\\1.0.0\\lib\\Interop.Domino.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\interop.domino.dll\\1.0.0\\lib\\Interop.Domino.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\interop.domino.dll\\1.0.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\interop.domino.dll\\1.0.0"
     },
     {
       "Package": {
@@ -527,10 +527,10 @@
         "Version": "2.0.6.9"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\lib\\Net45\\Microsoft.Activities.Extensions.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\lib\\Net45\\Microsoft.Activities.Extensions.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\lib\\Net45\\Microsoft.Activities.Extensions.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\lib\\Net45\\Microsoft.Activities.Extensions.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9"
     },
     {
       "Package": {
@@ -538,9 +538,9 @@
         "Version": "2.4.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\lib\\net45\\Microsoft.AspNet.SignalR.Client.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\lib\\net45\\Microsoft.AspNet.SignalR.Client.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0"
     },
     {
       "Package": {
@@ -548,10 +548,10 @@
         "Version": "2.2.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.Auth.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.Auth.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0"
     },
     {
       "Package": {
@@ -559,9 +559,9 @@
         "Version": "4.14.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.identity.client\\4.14.0\\lib\\net45\\Microsoft.Identity.Client.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.identity.client\\4.14.0\\lib\\net45\\Microsoft.Identity.Client.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.identity.client\\4.14.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.identity.client\\4.14.0"
     },
     {
       "Package": {
@@ -569,9 +569,9 @@
         "Version": "2.3.21"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.21\\lib\\net461\\Microsoft.Rest.ClientRuntime.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.21\\lib\\net461\\Microsoft.Rest.ClientRuntime.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.21"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.21"
     },
     {
       "Package": {
@@ -579,9 +579,9 @@
         "Version": "7.10.6071"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071\\lib\\Microsoft.VisualStudio.OLE.Interop.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071\\lib\\Microsoft.VisualStudio.OLE.Interop.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071"
     },
     {
       "Package": {
@@ -589,9 +589,9 @@
         "Version": "11.0.2"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\newtonsoft.json\\11.0.2\\lib\\net45\\Newtonsoft.Json.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\newtonsoft.json\\11.0.2\\lib\\net45\\Newtonsoft.Json.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\newtonsoft.json\\11.0.2"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\newtonsoft.json\\11.0.2"
     },
     {
       "Package": {
@@ -599,12 +599,12 @@
         "Version": "2.4.1"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OOXML.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXml4Net.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OOXML.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXml4Net.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\npoi\\2.4.1"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\npoi\\2.4.1"
     },
     {
       "Package": {
@@ -612,9 +612,9 @@
         "Version": "1.2.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\sharpziplib\\1.2.0\\lib\\net45\\ICSharpCode.SharpZipLib.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\sharpziplib\\1.2.0\\lib\\net45\\ICSharpCode.SharpZipLib.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\sharpziplib\\1.2.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\sharpziplib\\1.2.0"
     },
     {
       "Package": {
@@ -622,9 +622,9 @@
         "Version": "3.0.10"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib\\net40\\System.IO.Abstractions.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib\\net40\\System.IO.Abstractions.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\system.io.abstractions\\3.0.10"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.io.abstractions\\3.0.10"
     },
     {
       "Package": {
@@ -632,9 +632,9 @@
         "Version": "4.10.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\system.threading.tasks.dataflow\\4.10.0\\lib\\netstandard2.0\\System.Threading.Tasks.Dataflow.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.threading.tasks.dataflow\\4.10.0\\lib\\netstandard2.0\\System.Threading.Tasks.Dataflow.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\system.threading.tasks.dataflow\\4.10.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.threading.tasks.dataflow\\4.10.0"
     },
     {
       "Package": {
@@ -642,9 +642,9 @@
         "Version": "4.5.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\system.valuetuple\\4.5.0\\lib\\net461\\System.ValueTuple.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.valuetuple\\4.5.0\\lib\\net461\\System.ValueTuple.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\system.valuetuple\\4.5.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\system.valuetuple\\4.5.0"
     },
     {
       "Package": {
@@ -652,9 +652,9 @@
         "Version": "20.6.7473.25550-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath\\20.6.7473.25550-preview\\lib\\UiPath.Interop.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath\\20.6.7473.25550-preview\\lib\\UiPath.Interop.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath\\20.6.7473.25550-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath\\20.6.7473.25550-preview"
     },
     {
       "Package": {
@@ -662,11 +662,11 @@
         "Version": "2.9.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview\\lib\\net461\\UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview\\lib\\net461\\UiPath.Excel.Activities.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview\\lib\\net461\\UiPath.Excel.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview\\lib\\net461\\UiPath.Excel.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview\\lib\\net461\\UiPath.Excel.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview\\lib\\net461\\UiPath.Excel.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview"
     },
     {
       "Package": {
@@ -674,13 +674,13 @@
         "Version": "1.9.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\MailKit.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\MimeKit.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\UiPath.Mail.Activities.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\UiPath.Mail.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\MailKit.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\MimeKit.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\UiPath.Mail.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview\\lib\\net461\\UiPath.Mail.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview"
     },
     {
       "Package": {
@@ -688,9 +688,9 @@
         "Version": "2.6.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.ocr.contracts\\2.6.0\\lib\\net461\\UiPath.OCR.Contracts.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.ocr.contracts\\2.6.0\\lib\\net461\\UiPath.OCR.Contracts.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.ocr.contracts\\2.6.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.ocr.contracts\\2.6.0"
     },
     {
       "Package": {
@@ -698,9 +698,9 @@
         "Version": "20.4.0"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.platform\\20.4.0\\lib\\net461\\UiPath.Platform.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.platform\\20.4.0\\lib\\net461\\UiPath.Platform.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.platform\\20.4.0"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.platform\\20.4.0"
     },
     {
       "Package": {
@@ -708,21 +708,21 @@
         "Version": "20.6.1-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Docking.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Ribbon.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Shared.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.SyntaxEditor.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Text.LLParser.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Text.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Wizard.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\CustomInputForm.exe",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\UiPath.OrchestratorClient.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\UiPath.System.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\UiPath.System.Activities.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\CustomInputForm.exe",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\UiPath.OrchestratorClient.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\UiPath.System.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview\\lib\\net461\\UiPath.System.Activities.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview"
     },
     {
       "Package": {
@@ -730,9 +730,9 @@
         "Version": "1.2.20"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.telemetry.client\\1.2.20\\lib\\net461\\TelemetryClient.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.telemetry.client\\1.2.20\\lib\\net461\\TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.telemetry.client\\1.2.20"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.telemetry.client\\1.2.20"
     },
     {
       "Package": {
@@ -740,25 +740,25 @@
         "Version": "20.6.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.DataGrid.Contrib.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Docking.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Editors.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Ribbon.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Shared.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.SyntaxEditor.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Text.LLParser.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Text.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Wizard.Wpf.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.CV.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.CV.Activities.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.CV.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.Wizards.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.DataGrid.Contrib.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Editors.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.CV.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.CV.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview\\lib\\net461\\UiPath.Wizards.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview"
     },
     {
       "Package": {
@@ -766,10 +766,10 @@
         "Version": "2.1.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision\\2.1.0-preview\\lib\\net461\\UiPath.Vision.Core.dll",
-        "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision\\2.1.0-preview\\lib\\net461\\UiPath.Vision.dll"
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision\\2.1.0-preview\\lib\\net461\\UiPath.Vision.Core.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision\\2.1.0-preview\\lib\\net461\\UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\fokin_ok\\.nuget\\packages\\uipath.vision\\2.1.0-preview"
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision\\2.1.0-preview"
     }
   ]
 }
