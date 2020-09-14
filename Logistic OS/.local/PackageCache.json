@@ -9,7 +9,7 @@
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.Design.dll",
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.dll"
       ],
-      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9"
+      "Path": null
     },
     {
       "Package": {
@@ -30,7 +30,7 @@
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities/2.9.0-preview\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities/2.9.0-preview\\lib/net461/UiPath.Excel.dll"
       ],
-      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.excel.activities\\2.9.0-preview"
+      "Path": null
     },
     {
       "Package": {
@@ -50,7 +50,7 @@
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/UiPath.Mail.Activities.dll",
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities/1.9.0-preview\\lib/net461/UiPath.Mail.dll"
       ],
-      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.mail.activities\\1.9.0-preview"
+      "Path": null
     },
     {
       "Package": {
@@ -76,7 +76,7 @@
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/UiPath.System.Activities.Design.dll",
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities/20.6.1-preview\\lib/net461/UiPath.System.Activities.dll"
       ],
-      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.system.activities\\20.6.1-preview"
+      "Path": null
     },
     {
       "Package": {
@@ -125,7 +125,7 @@
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview"
+      "Path": null
     }
   ],
   "Conflicts": [],
