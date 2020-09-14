@@ -1826,9 +1826,9 @@
     "restore": {
       "projectUniqueName": "Logistic OS",
       "projectName": "Logistic OS",
-      "projectPath": "C:\\[PROJECTS]\\Logistic-OS\\Logistic OS\\.local",
+      "projectPath": "D:\\[Programming]\\[Uipath]\\Logistic-OS\\Logistic OS\\.local",
       "packagesPath": "C:\\Users\\Gvozdoder\\.nuget\\packages\\",
-      "outputPath": "C:\\[PROJECTS]\\Logistic-OS\\Logistic OS\\.local"
+      "outputPath": "D:\\[Programming]\\[Uipath]\\Logistic-OS\\Logistic OS\\.local"
     },
     "frameworks": {
       "net461": {
@@ -1867,8 +1867,22 @@
       "code": "NU3034",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Extended.Wpf.Toolkit 2.8' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "Extended.Wpf.Toolkit"
+      "message": "Package 'System.Threading.Tasks.Dataflow 4.10.0' from source 'https://www.myget.org/F/workflow/': This package is signed but not by a trusted signer.",
+      "libraryId": "System.Threading.Tasks.Dataflow"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Rest.ClientRuntime 2.3.21' from source 'https://www.myget.org/F/workflow/': This package is signed but not by a trusted signer.",
+      "libraryId": "Microsoft.Rest.ClientRuntime"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Identity.Client 4.14.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Microsoft.Identity.Client"
     }
   ]
 }
