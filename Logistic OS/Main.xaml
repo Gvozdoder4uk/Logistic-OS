@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2173,52241" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:maes="clr-namespace:Microsoft.Activities.Extensions.Statements;assembly=Microsoft.Activities.Extensions" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2173,52071" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:maes="clr-namespace:Microsoft.Activities.Extensions.Statements;assembly=Microsoft.Activities.Extensions" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -72,7 +72,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Основной Движок Logistic OS" sap:VirtualizedContainerService.HintSize="2183,52136" sap2010:WorkflowViewState.IdRef="Sequence_122">
+  <Sequence DisplayName="Основной Движок Logistic OS" sap:VirtualizedContainerService.HintSize="2183,51966" sap2010:WorkflowViewState.IdRef="Sequence_122">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="TrimPort" />
       <Variable x:TypeArguments="x:String" Name="File_Naming" />
@@ -91,11 +91,7 @@
         <Variable x:TypeArguments="scg:Dictionary(x:Object, x:Object)" Default="[New Dictionary(Of Object,Object)]" Name="Cargo_Dictionary" />
         <Variable x:TypeArguments="sd:DataTable" Name="DictOfCargo" />
         <Variable x:TypeArguments="x:Int32" Name="CargoCol" />
-        <Variable x:TypeArguments="scg:Dictionary(x:Object, x:Object)" Name="Month_Dictionary">
-          <Variable.Default>
-            <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:Object, x:Object)" ExpressionText="New Dictionary(Of Object,Object)" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="scg:Dictionary(x:Object, x:Object)" Default="[New Dictionary(Of Object,Object)]" Name="Month_Dictionary" />
         <Variable x:TypeArguments="x:String" Name="Year_Selector" />
         <Variable x:TypeArguments="x:Int32" Name="PortCol" />
       </Sequence.Variables>
@@ -2793,11 +2789,7 @@
         <Variable x:TypeArguments="sd:DataTable" Name="SummaryData" />
         <Variable x:TypeArguments="x:Int32" Name="lastRow" />
         <Variable x:TypeArguments="x:Int32" Name="CorrecterCounter" />
-        <Variable x:TypeArguments="scg:List(x:String)" Name="ListOfCompare">
-          <Variable.Default>
-            <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List(Of String)" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="ListOfCompare" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -3210,7 +3202,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" Email="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" Body="&lt;div style='border:2px solid black;'&gt;&#xD;&#xA;&lt;h3&gt;Успешно выполнена обработка данных подхода судов на сайте Logistic OS&lt;/h&gt;&lt;br&gt;&#xD;&#xA;&lt;p&gt;С результатами обработки вы можете ознакомиться в файле + File_Naming + &lt;/div&gt;" DisplayName="Send SMTP Mail Message" EnableSSL="True" From="Logistic_OS@rusagrotrans.ru" sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Port="25" SecureConnection="None" Server="webmail.rusagrotrans.ru" Subject="[&quot;Результат обработки данных Lofistic OS &quot; + DateTime.Now.ToString(&quot;dd/MM/yyyy&quot;)]" To="fokin_ok@rusagrotrans.ru">
+          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" Email="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" Body="&lt;div style='border:2px solid black;'&gt;&#xA;&lt;h3&gt;Успешно выполнена обработка данных подхода судов на сайте Logistic OS&lt;/h&gt;&lt;br&gt;&#xA;&lt;p&gt;С результатами обработки вы можете ознакомиться в файле + File_Naming + &lt;/div&gt;" DisplayName="Send SMTP Mail Message" EnableSSL="True" From="Logistic_OS@rusagrotrans.ru" sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Port="25" SecureConnection="None" Server="webmail.rusagrotrans.ru" Subject="[&quot;Результат обработки данных Lofistic OS &quot; + DateTime.Now.ToString(&quot;dd/MM/yyyy&quot;)]" To="fokin_ok@rusagrotrans.ru">
             <ui:SendMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </ui:SendMail.Files>
@@ -3218,37 +3210,26 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2141,579" sap2010:WorkflowViewState.IdRef="CommentOut_42">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="476,501" sap2010:WorkflowViewState.IdRef="Sequence_203">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,409" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" WorkbookPath="TempDocs\Test.xlsx">
-            <ui:ExcelApplicationScope.Body>
-              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="242,300" sap2010:WorkflowViewState.IdRef="Sequence_199">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:ExcelDeleteRange DisplayName="Очистка Loading Completed" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A2:O300" SheetName="Loading Completed" ShiftCells="False" ShiftOption="ShiftUp" />
-                  <ui:ExcelDeleteRange DisplayName="Очистка Under Loading" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A2:O300" SheetName="Under Loading" ShiftCells="False" ShiftOption="ShiftUp" />
-                  <ui:ExcelDeleteRange DisplayName="Очистка On Roads" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_3" Range="A2:O300" SheetName="On Roads" ShiftCells="False" ShiftOption="ShiftUp" />
-                  <ui:ExcelDeleteRange DisplayName="Очистка Due To Arrival" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_4" Range="A2:O300" SheetName="Due To Arrival" ShiftCells="False" ShiftOption="ShiftUp" />
-                </Sequence>
-              </ActivityAction>
-            </ui:ExcelApplicationScope.Body>
-          </ui:ExcelApplicationScope>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="2141,409" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" WorkbookPath="TempDocs\Test.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="242,300" sap2010:WorkflowViewState.IdRef="Sequence_199">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelDeleteRange DisplayName="Очистка Loading Completed" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A2:O300" SheetName="Loading Completed" ShiftCells="False" ShiftOption="ShiftUp" />
+            <ui:ExcelDeleteRange DisplayName="Очистка Under Loading" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A2:O300" SheetName="Under Loading" ShiftCells="False" ShiftOption="ShiftUp" />
+            <ui:ExcelDeleteRange DisplayName="Очистка On Roads" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_3" Range="A2:O300" SheetName="On Roads" ShiftCells="False" ShiftOption="ShiftUp" />
+            <ui:ExcelDeleteRange DisplayName="Очистка Due To Arrival" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_4" Range="A2:O300" SheetName="Due To Arrival" ShiftCells="False" ShiftOption="ShiftUp" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
     <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;C:\[PROJECTS]\Logistic-OS\Logistic OS\Backups\Summary_&quot;+ Month_Selector.ToString + &quot;_&quot;+ DateTime.Now.ToString(&quot;dd.MM.HH&quot;) +&quot;.xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="2141,160" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="False" Path="[File_Naming]" />
   </Sequence>
 </Activity>
