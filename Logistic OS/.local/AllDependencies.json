@@ -121,6 +121,20 @@
           "lib/Interop.Domino.dll": {}
         }
       },
+      "Microsoft.Activities/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Activities.Design.Services.dll": {},
+          "lib/net45/Microsoft.Activities.Design.dll": {},
+          "lib/net45/Microsoft.Activities.dll": {},
+          "lib/net45/Microsoft.Workflow.Client.dll": {},
+          "lib/net45/Microsoft.Workflow.Common.dll": {},
+          "lib/net45/Microsoft.Workflow.Tracing.dll": {}
+        }
+      },
       "Microsoft.Activities.Extensions/2.0.6.9": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1055,6 +1069,25 @@
         "lib/Interop.Domino.dll"
       ]
     },
+    "Microsoft.Activities/1.0.1": {
+      "sha512": "jkwJR/MMdyLol9wkIXkbpcCu8AUAJte7UZM6IcoeOnrX8cNgHppt6IawNfkhGqQs6ulTklBuZ2DjLj1/154iUA==",
+      "type": "package",
+      "path": "microsoft.activities/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net45/Microsoft.Activities.Design.Services.dll",
+        "lib/net45/Microsoft.Activities.Design.dll",
+        "lib/net45/Microsoft.Activities.Design.xml",
+        "lib/net45/Microsoft.Activities.dll",
+        "lib/net45/Microsoft.Activities.xml",
+        "lib/net45/Microsoft.Workflow.Client.dll",
+        "lib/net45/Microsoft.Workflow.Client.xml",
+        "lib/net45/Microsoft.Workflow.Common.dll",
+        "lib/net45/Microsoft.Workflow.Tracing.dll",
+        "microsoft.activities.1.0.1.nupkg.sha512",
+        "microsoft.activities.nuspec"
+      ]
+    },
     "Microsoft.Activities.Extensions/2.0.6.9": {
       "sha512": "yGwK3gYUzzGIzgybBtXsCbcWIj+Dv+gadnaWkmG0WpBs22AV8ZS7deFhAb2pznDoGz0Pj4M7Tt9RwK9VrNzf4A==",
       "type": "package",
@@ -1812,6 +1845,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "Microsoft.Activities >= 1.0.1 <= 1.0.1",
       "Microsoft.Activities.Extensions >= 2.0.6.9 <= 2.0.6.9",
       "UiPath.Excel.Activities >= 2.9.0-preview <= 2.9.0-preview",
       "UiPath.Mail.Activities >= 1.9.0-preview <= 1.9.0-preview",
@@ -1826,13 +1860,18 @@
     "restore": {
       "projectUniqueName": "Logistic OS",
       "projectName": "Logistic OS",
-      "projectPath": "C:\\[PROJECTS]\\Logistic-OS\\Logistic OS\\.local",
+      "projectPath": "D:\\[Programming]\\[Uipath]\\Logistic-OS\\Logistic OS\\.local",
       "packagesPath": "C:\\Users\\Gvozdoder\\.nuget\\packages\\",
-      "outputPath": "C:\\[PROJECTS]\\Logistic-OS\\Logistic OS\\.local"
+      "outputPath": "D:\\[Programming]\\[Uipath]\\Logistic-OS\\Logistic OS\\.local"
     },
     "frameworks": {
       "net461": {
         "dependencies": {
+          "Microsoft.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.1, 1.0.1]"
+          },
           "Microsoft.Activities.Extensions": {
             "include": "Runtime",
             "target": "Package",

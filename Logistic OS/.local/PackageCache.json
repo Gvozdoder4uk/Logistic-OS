@@ -126,6 +126,21 @@
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.vision/2.1.0-preview\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\uipath.uiautomation.activities\\20.6.0-preview"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Activities",
+        "Version": "1.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities/1.0.1\\lib/net45/Microsoft.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities/1.0.1\\lib/net45/Microsoft.Activities.Design.Services.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities/1.0.1\\lib/net45/Microsoft.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities/1.0.1\\lib/net45/Microsoft.Workflow.Client.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities/1.0.1\\lib/net45/Microsoft.Workflow.Common.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities/1.0.1\\lib/net45/Microsoft.Workflow.Tracing.dll"
+      ],
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities\\1.0.1"
     }
   ],
   "Conflicts": [],
@@ -173,6 +188,11 @@
     "interop.domino.dll": {
       "Id": "interop.domino.dll",
       "Version": "1.0.0",
+      "Dependencies": []
+    },
+    "Microsoft.Activities": {
+      "Id": "Microsoft.Activities",
+      "Version": "1.0.1",
       "Dependencies": []
     },
     "Microsoft.Activities.Extensions": {
@@ -520,6 +540,21 @@
         "C:\\Users\\Gvozdoder\\.nuget\\packages\\interop.domino.dll\\1.0.0\\lib\\Interop.Domino.dll"
       ],
       "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\interop.domino.dll\\1.0.0"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Activities",
+        "Version": "1.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities\\1.0.1\\lib\\net45\\Microsoft.Activities.Design.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities\\1.0.1\\lib\\net45\\Microsoft.Activities.Design.Services.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities\\1.0.1\\lib\\net45\\Microsoft.Activities.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities\\1.0.1\\lib\\net45\\Microsoft.Workflow.Client.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities\\1.0.1\\lib\\net45\\Microsoft.Workflow.Common.dll",
+        "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities\\1.0.1\\lib\\net45\\Microsoft.Workflow.Tracing.dll"
+      ],
+      "Path": "C:\\Users\\Gvozdoder\\.nuget\\packages\\microsoft.activities\\1.0.1"
     },
     {
       "Package": {

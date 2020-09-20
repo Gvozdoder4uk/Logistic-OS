@@ -3,6 +3,7 @@
   "description": "Выгрузка в таблицу EXCEL данных по Портам",
   "main": "Main.xaml",
   "dependencies": {
+    "Microsoft.Activities": "[1.0.1]",
     "Microsoft.Activities.Extensions": "[2.0.6.9]",
     "UiPath.Excel.Activities": "[2.9.0-preview]",
     "UiPath.Mail.Activities": "[1.9.0-preview]",
@@ -45,7 +46,5 @@
     "output": []
   },
   "expressionLanguage": "VisualBasic",
-  "isTemplate": false,
-  "templateProjectData": {},
-  "publishData": {}
+  "isTemplate": false
 }
