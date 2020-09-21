@@ -74,7 +74,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Основной Движок Logistic OS" sap:VirtualizedContainerService.HintSize="3446,73053" sap2010:WorkflowViewState.IdRef="Sequence_122">
+  <Sequence DisplayName="Основной Движок Logistic OS" sap:VirtualizedContainerService.HintSize="3446,74069" sap2010:WorkflowViewState.IdRef="Sequence_122">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="TrimPort" />
       <Variable x:TypeArguments="x:String" Name="File_Naming" />
@@ -2614,16 +2614,80 @@
         </ui:OpenBrowser.Body>
       </ui:OpenBrowser>
     </Sequence>
-    <Sequence DisplayName="Формирование таблицы Обновления и добавления записей" sap:VirtualizedContainerService.HintSize="3404,5551" sap2010:WorkflowViewState.IdRef="Sequence_261">
+    <Sequence DisplayName="Формирование таблицы Обновления и добавления записей" sap:VirtualizedContainerService.HintSize="3404,6567" sap2010:WorkflowViewState.IdRef="Sequence_261">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="UniqueDict" />
         <Variable x:TypeArguments="sd:DataTable" Name="Uniq_TempData" />
+        <Variable x:TypeArguments="x:Int32" Name="AppendRow" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Заполнение словаря всех судов из результирующего файла" sap:VirtualizedContainerService.HintSize="957,976" WorkbookPath="[File_Naming]">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="847,867">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="805,60">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[AppendRow]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">2</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[Uniq_TempData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="805,59" SheetName="ИТОГ">
+                <ui:ExcelReadRange.Range>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:ExcelReadRange.Range>
+              </ui:ExcelReadRange>
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Uniq_TempData]" DisplayName="ПРОХОД ПО SUMMARY" sap:VirtualizedContainerService.HintSize="805,576">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="IMO" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="755,428">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If Condition="[IMO(&quot;Imo&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="713,236">
+                        <If.Then>
+                          <ui:ExcelWriteCell Cell="[&quot;A&quot; + AppendRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" SheetName="Unique" Text="0" />
+                        </If.Then>
+                        <If.Else>
+                          <ui:ExcelWriteCell Cell="[&quot;A&quot; + AppendRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" SheetName="Unique" Text="[IMO(&quot;Imo&quot;).ToString]" />
+                        </If.Else>
+                      </If>
+                      <Assign sap:VirtualizedContainerService.HintSize="713,60">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[AppendRow]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[AppendRow+1]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+            </Sequence>
+          </ActivityAction>
+        </ui:ExcelApplicationScope.Body>
+      </ui:ExcelApplicationScope>
       <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Временный файл для выборки судов" sap:VirtualizedContainerService.HintSize="957,3925" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_27" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
@@ -2631,9 +2695,6 @@
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
             <Sequence DisplayName="Считывание и заполнение словаря Уникальности" sap:VirtualizedContainerService.HintSize="923,3816" sap2010:WorkflowViewState.IdRef="Sequence_255">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="x:Int32" Name="AppendRow" />
-              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
