@@ -74,7 +74,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Основной Движок Logistic OS" sap:VirtualizedContainerService.HintSize="3446,72287" sap2010:WorkflowViewState.IdRef="Sequence_122">
+  <Sequence DisplayName="Основной Движок Logistic OS" sap:VirtualizedContainerService.HintSize="3446,72564" sap2010:WorkflowViewState.IdRef="Sequence_122">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="TrimPort" />
       <Variable x:TypeArguments="x:String" Name="File_Naming" />
@@ -85,6 +85,8 @@
       <Variable x:TypeArguments="x:Boolean" Name="ArchiveChecker" />
       <Variable x:TypeArguments="scg:Dictionary(x:Object, x:Object)" Default="[New Dictionary(Of Object,Object)]" Name="Unique_Dictionary" />
       <Variable x:TypeArguments="x:Boolean" Name="DateResult" />
+      <Variable x:TypeArguments="x:Boolean" Name="Checker_Dict_Vessel" />
+      <Variable x:TypeArguments="x:Int32" Name="Cheker_Dict_Writes" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2614,32 +2616,38 @@
         </ui:OpenBrowser.Body>
       </ui:OpenBrowser>
     </Sequence>
-    <Sequence DisplayName="Формирование таблицы Обновления и добавления записей" sap:VirtualizedContainerService.HintSize="3404,4955" sap2010:WorkflowViewState.IdRef="Sequence_261">
+    <Sequence DisplayName="Формирование таблицы Обновления и добавления записей" sap:VirtualizedContainerService.HintSize="3404,2811" sap2010:WorkflowViewState.IdRef="Sequence_261">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="UniqueDict" />
         <Variable x:TypeArguments="sd:DataTable" Name="Uniq_TempData" />
+        <Variable x:TypeArguments="x:Int32" Name="AppendRow" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Временный файл для выборки судов" sap:VirtualizedContainerService.HintSize="859,3329" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_27" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
+      <Assign sap:VirtualizedContainerService.HintSize="915,60" sap2010:WorkflowViewState.IdRef="Assign_239">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[File_Naming]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["C:\Logistic OS\Main_Files\Summary_Sep.2020.xlsx"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Заполнение словаря всех судов из результирующего файла" sap:VirtualizedContainerService.HintSize="915,1085" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_29" WorkbookPath="[File_Naming]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Считывание и заполнение словаря Уникальности" sap:VirtualizedContainerService.HintSize="544,3220" sap2010:WorkflowViewState.IdRef="Sequence_255">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="x:Int32" Name="AppendRow" />
-              </Sequence.Variables>
+            <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="881,976" sap2010:WorkflowViewState.IdRef="Sequence_319">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="502,60" sap2010:WorkflowViewState.IdRef="Assign_188">
+              <Assign sap:VirtualizedContainerService.HintSize="839,60" sap2010:WorkflowViewState.IdRef="Assign_240">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[AppendRow]</OutArgument>
                 </Assign.To>
@@ -2647,195 +2655,51 @@
                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[Uniq_TempData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="502,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_20" SheetName="Due To Arrival">
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[Uniq_TempData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="839,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_25" SheetName="ИТОГ">
                 <ui:ExcelReadRange.Range>
                   <InArgument x:TypeArguments="x:String">
                     <Literal x:TypeArguments="x:String" Value="" />
                   </InArgument>
                 </ui:ExcelReadRange.Range>
               </ui:ExcelReadRange>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="502,628" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_23" WorkbookPath="C:\Logistic OS\Templates\Templates_config.xlsx">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="839,685" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_30" WorkbookPath="C:\Logistic OS\Templates\Templates_config.xlsx">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="468,519" sap2010:WorkflowViewState.IdRef="Sequence_248">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Uniq_TempData]" DisplayName="Проход по DueToArr" sap:VirtualizedContainerService.HintSize="426,427" sap2010:WorkflowViewState.IdRef="ForEachRow_20">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="IMO" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_247">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:ExcelWriteCell Cell="[&quot;A&quot; + AppendRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_230" SheetName="Unique" Text="[IMO(&quot;Imo&quot;).ToString]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_189">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Int32">[AppendRow]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Int32">[AppendRow+1]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                      </ui:ForEachRow>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:ExcelApplicationScope.Body>
-              </ui:ExcelApplicationScope>
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[Uniq_TempData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="502,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_21" SheetName="On Roads">
-                <ui:ExcelReadRange.Range>
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
-                </ui:ExcelReadRange.Range>
-              </ui:ExcelReadRange>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="502,628" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_24" WorkbookPath="C:\Logistic OS\Templates\Templates_config.xlsx">
-                <ui:ExcelApplicationScope.Body>
-                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="468,519" sap2010:WorkflowViewState.IdRef="Sequence_250">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Uniq_TempData]" DisplayName="Проход по DueToArr" sap:VirtualizedContainerService.HintSize="426,427" sap2010:WorkflowViewState.IdRef="ForEachRow_21">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="IMO" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_249">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:ExcelWriteCell Cell="[&quot;A&quot; + AppendRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_231" SheetName="Unique" Text="[IMO(&quot;Imo&quot;).ToString]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_190">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Int32">[AppendRow]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Int32">[AppendRow+1]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                      </ui:ForEachRow>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:ExcelApplicationScope.Body>
-              </ui:ExcelApplicationScope>
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[Uniq_TempData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="502,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_22" SheetName="Under Loading">
-                <ui:ExcelReadRange.Range>
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
-                </ui:ExcelReadRange.Range>
-              </ui:ExcelReadRange>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="502,628" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_25" WorkbookPath="C:\Logistic OS\Templates\Templates_config.xlsx">
-                <ui:ExcelApplicationScope.Body>
-                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="468,519" sap2010:WorkflowViewState.IdRef="Sequence_252">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Uniq_TempData]" DisplayName="Проход по DueToArr" sap:VirtualizedContainerService.HintSize="426,427" sap2010:WorkflowViewState.IdRef="ForEachRow_22">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="IMO" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_251">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:ExcelWriteCell Cell="[&quot;A&quot; + AppendRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_232" SheetName="Unique" Text="[IMO(&quot;Imo&quot;).ToString]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_191">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Int32">[AppendRow]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Int32">[AppendRow+1]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                      </ui:ForEachRow>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:ExcelApplicationScope.Body>
-              </ui:ExcelApplicationScope>
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[Uniq_TempData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="502,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_23" SheetName="Loading Completed">
-                <ui:ExcelReadRange.Range>
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
-                </ui:ExcelReadRange.Range>
-              </ui:ExcelReadRange>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="502,628" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_26" WorkbookPath="C:\Logistic OS\Templates\Templates_config.xlsx">
-                <ui:ExcelApplicationScope.Body>
-                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="468,519" sap2010:WorkflowViewState.IdRef="Sequence_254">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Uniq_TempData]" DisplayName="Проход по DueToArr" sap:VirtualizedContainerService.HintSize="426,427" sap2010:WorkflowViewState.IdRef="ForEachRow_23">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="IMO" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_253">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:ExcelWriteCell Cell="[&quot;A&quot; + AppendRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_233" SheetName="Unique" Text="[IMO(&quot;Imo&quot;).ToString]" />
-                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_192">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Int32">[AppendRow]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Int32">[AppendRow+1]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                      </ui:ForEachRow>
-                    </Sequence>
+                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Uniq_TempData]" DisplayName="ПРОХОД ПО SUMMARY" sap:VirtualizedContainerService.HintSize="805,576" sap2010:WorkflowViewState.IdRef="ForEachRow_25">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="IMO" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="755,428" sap2010:WorkflowViewState.IdRef="Sequence_318">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[IMO(&quot;Imo&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="713,236" sap2010:WorkflowViewState.IdRef="If_105">
+                              <If.Then>
+                                <ui:ExcelWriteCell Cell="[&quot;A&quot; + AppendRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_261" SheetName="Unique" Text="0" />
+                              </If.Then>
+                              <If.Else>
+                                <ui:ExcelWriteCell Cell="[&quot;A&quot; + AppendRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_262" SheetName="Unique" Text="[IMO(&quot;Imo&quot;).ToString]" />
+                              </If.Else>
+                            </If>
+                            <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_241">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[AppendRow]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[AppendRow+1]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
                   </ActivityAction>
                 </ui:ExcelApplicationScope.Body>
               </ui:ExcelApplicationScope>
@@ -2843,7 +2707,7 @@
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
-      <Sequence DisplayName="Считывание словарей" sap:VirtualizedContainerService.HintSize="859,1494" sap2010:WorkflowViewState.IdRef="Sequence_260">
+      <Sequence DisplayName="Считывание словарей" sap:VirtualizedContainerService.HintSize="915,1494" sap2010:WorkflowViewState.IdRef="Sequence_260">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="DictOfPorts" />
           <Variable x:TypeArguments="sd:DataTable" Name="DictOfChapter" />
@@ -2920,7 +2784,7 @@
         </ui:ExcelApplicationScope>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="DUE TO ARRIVAL TEMPLATE" sap:VirtualizedContainerService.HintSize="3404,7924" sap2010:WorkflowViewState.IdRef="Sequence_121">
+    <Sequence DisplayName="DUE TO ARRIVAL TEMPLATE" sap:VirtualizedContainerService.HintSize="3404,8045" sap2010:WorkflowViewState.IdRef="Sequence_121">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="DueToArr" />
         <Variable x:TypeArguments="x:Int32" Name="SumLine" />
@@ -2941,13 +2805,13 @@
           <InArgument x:TypeArguments="x:String">["C:\Logistic OS\Main_Files\Summary_Sep.2020.xlsx"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Открытие сформированного документа из Lineup" sap:VirtualizedContainerService.HintSize="2877,7732" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_13" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Открытие сформированного документа из Lineup" sap:VirtualizedContainerService.HintSize="2877,7853" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_13" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Считывание данных Due To Arrival" sap:VirtualizedContainerService.HintSize="2843,7623" sap2010:WorkflowViewState.IdRef="Sequence_120">
+            <Sequence DisplayName="Считывание данных Due To Arrival" sap:VirtualizedContainerService.HintSize="2843,7744" sap2010:WorkflowViewState.IdRef="Sequence_120">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2960,13 +2824,13 @@
                   </InArgument>
                 </ui:ExcelReadRange.Range>
               </ui:ExcelReadRange>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="2801,7432" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" WorkbookPath="[File_Naming]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="2801,7553" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" WorkbookPath="[File_Naming]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="2767,7323" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="2767,7444" sap2010:WorkflowViewState.IdRef="Sequence_119">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2995,13 +2859,13 @@
                           <InArgument x:TypeArguments="x:Int32">2</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DueToArr]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2725,6932" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DueToArr]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2725,7053" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2675,6784" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2675,6905" sap2010:WorkflowViewState.IdRef="Sequence_118">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="CheckNew" />
                               </Sequence.Variables>
@@ -3026,22 +2890,60 @@
                                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2633,229" sap2010:WorkflowViewState.IdRef="CommentOut_55">
-                                <ui:CommentOut.Body>
-                                  <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_315">
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="2633,59" sap2010:WorkflowViewState.IdRef="MessageBox_78" Text="[row(&quot;Imo&quot;).ToString]" />
+                              <If Condition="[Unique_Dictionary.Keys.Contains(row(&quot;Imo&quot;))]" DisplayName="Проверка ключа в словаре суммы" sap:VirtualizedContainerService.HintSize="2633,500" sap2010:WorkflowViewState.IdRef="If_104">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,351" sap2010:WorkflowViewState.IdRef="Sequence_321">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_78" Text="[row(&quot;Imo&quot;).ToString]" />
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_81" Text="[&quot;Запись уже есть =&gt; Обновляем&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_242">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[Checker_Dict_Vessel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_250">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[Cheker_Dict_Writes]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[CInt(Unique_Dictionary(row("Imo")))]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
                                   </Sequence>
-                                </ui:CommentOut.Body>
-                              </ui:CommentOut>
-                              <If Condition="[row(&quot;Imo&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="2633,209" sap2010:WorkflowViewState.IdRef="If_104">
-                                <If.Then>
-                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_81" Text="[&quot;ПУСТАЯ ХЕРОТА!!!!&quot;]" />
                                 </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,351" sap2010:WorkflowViewState.IdRef="Sequence_322">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_82" Text="[&quot;Записи нет в сумме =&gt; Создаем новую&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_243">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[Checker_Dict_Vessel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_251">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[Cheker_Dict_Writes]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Else>
                               </If>
                               <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[SummaryData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2633,3566" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
                                 <ui:ForEachRow.Body>
@@ -3055,7 +2957,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[row(&quot;Imo&quot;).ToString = prev(&quot;Imo&quot;).ToString and row(&quot;Port&quot;).ToString = prev(&quot;Порт&quot;).ToString and (CInt(Unique_Dictionary(row(&quot;Imo&quot;)).ToString) &gt; 0 or Unique_Dictionary(row(&quot;Imo&quot;)).ToString = &quot;&quot;)]" sap:VirtualizedContainerService.HintSize="2541,3326" sap2010:WorkflowViewState.IdRef="If_17">
+                                      <If Condition="[row(&quot;Imo&quot;).ToString = prev(&quot;Imo&quot;).ToString and row(&quot;Port&quot;).ToString = prev(&quot;Порт&quot;).ToString and (Checker_Dict_Vessel = True and Cheker_Dict_Writes &gt; 0)]" sap:VirtualizedContainerService.HintSize="2541,3326" sap2010:WorkflowViewState.IdRef="If_17">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="2234,3177" sap2010:WorkflowViewState.IdRef="Sequence_113">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -3149,9 +3051,9 @@
                                                       <InArgument x:TypeArguments="x:Int32">[cint(Unique_Dictionary(prev("Imo"))) - 1]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
-                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="857,229" sap2010:WorkflowViewState.IdRef="CommentOut_49">
+                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="857,229" sap2010:WorkflowViewState.IdRef="CommentOut_59">
                                                     <ui:CommentOut.Body>
-                                                      <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_273">
+                                                      <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_325">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3477,7 +3379,7 @@
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
     </Sequence>
-    <Sequence DisplayName="ON ROADS TEMPLATE" sap:VirtualizedContainerService.HintSize="3404,7176" sap2010:WorkflowViewState.IdRef="Sequence_133">
+    <Sequence DisplayName="ON ROADS TEMPLATE" sap:VirtualizedContainerService.HintSize="3404,7886" sap2010:WorkflowViewState.IdRef="Sequence_133">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="DueToArr" />
         <Variable x:TypeArguments="x:Int32" Name="SumLine" />
@@ -3502,13 +3404,13 @@
           </Sequence>
         </ui:CommentOut.Body>
       </ui:CommentOut>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Открытие сформированного документа из Lineup" sap:VirtualizedContainerService.HintSize="2052,6815" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_15" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Открытие сформированного документа из Lineup" sap:VirtualizedContainerService.HintSize="2052,7525" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_15" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Считывание данных Due To Arrival" sap:VirtualizedContainerService.HintSize="2018,6706" sap2010:WorkflowViewState.IdRef="Sequence_132">
+            <Sequence DisplayName="Считывание данных Due To Arrival" sap:VirtualizedContainerService.HintSize="2018,7416" sap2010:WorkflowViewState.IdRef="Sequence_132">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3521,13 +3423,13 @@
                   </InArgument>
                 </ui:ExcelReadRange.Range>
               </ui:ExcelReadRange>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1976,6515" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_14" WorkbookPath="[File_Naming]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1976,7225" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_14" WorkbookPath="[File_Naming]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1942,6406" sap2010:WorkflowViewState.IdRef="Sequence_131">
+                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1942,7116" sap2010:WorkflowViewState.IdRef="Sequence_131">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="variable1" />
                       </Sequence.Variables>
@@ -3559,13 +3461,13 @@
                           <InArgument x:TypeArguments="x:Int32">2</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DueToArr]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1900,6015" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DueToArr]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1900,6725" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1850,5867" sap2010:WorkflowViewState.IdRef="Sequence_130">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1850,6577" sap2010:WorkflowViewState.IdRef="Sequence_130">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="CheckNew" />
                               </Sequence.Variables>
@@ -3590,6 +3492,71 @@
                                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <If Condition="[Unique_Dictionary.Keys.Contains(row(&quot;Imo&quot;))]" DisplayName="Проверка ключа в словаре суммы" sap:VirtualizedContainerService.HintSize="1808,670" sap2010:WorkflowViewState.IdRef="If_109">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="478,521" sap2010:WorkflowViewState.IdRef="Sequence_336">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,229" sap2010:WorkflowViewState.IdRef="CommentOut_63">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_335">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_89" Text="[&quot;Запись уже есть =&gt; Обновляем&quot;]" />
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
+                                    <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_252">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[Checker_Dict_Vessel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_253">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[Cheker_Dict_Writes]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[CInt(Unique_Dictionary(row("Imo").ToString))]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,351" sap2010:WorkflowViewState.IdRef="Sequence_337">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_90" Text="[&quot;Записи нет в сумме =&gt; Создаем новую&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_254">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[Checker_Dict_Vessel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_255">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[Cheker_Dict_Writes]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
                               <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[SummaryData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1808,3294" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
@@ -3602,7 +3569,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[row(&quot;Imo&quot;).ToString = prev(&quot;Imo&quot;).ToString and row(&quot;Port&quot;).ToString = prev(&quot;Порт&quot;).ToString and CInt(Unique_Dictionary(row(&quot;Imo&quot;)).ToString) &gt; 0]" sap:VirtualizedContainerService.HintSize="1716,3054" sap2010:WorkflowViewState.IdRef="If_19">
+                                      <If Condition="[row(&quot;Imo&quot;).ToString = prev(&quot;Imo&quot;).ToString and row(&quot;Port&quot;).ToString = prev(&quot;Порт&quot;).ToString and (Checker_Dict_Vessel = True  and Cheker_Dict_Writes &gt; 0)]" sap:VirtualizedContainerService.HintSize="1716,3054" sap2010:WorkflowViewState.IdRef="If_19">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="1409,2905" sap2010:WorkflowViewState.IdRef="Sequence_127">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -3917,7 +3884,7 @@
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
     </Sequence>
-    <Sequence DisplayName="UNDER LOADING TEMPLATE" sap:VirtualizedContainerService.HintSize="3404,8235" sap2010:WorkflowViewState.IdRef="Sequence_142">
+    <Sequence DisplayName="UNDER LOADING TEMPLATE" sap:VirtualizedContainerService.HintSize="3404,8945" sap2010:WorkflowViewState.IdRef="Sequence_142">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="DueToArr" />
         <Variable x:TypeArguments="x:Int32" Name="SumLine" />
@@ -3931,13 +3898,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="2052,59" sap2010:WorkflowViewState.IdRef="MessageBox_62" Text="[&quot;Обработка задания UNDER LOADING&quot;]" />
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Открытие сформированного документа из Lineup" sap:VirtualizedContainerService.HintSize="2052,8044" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_17" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Открытие сформированного документа из Lineup" sap:VirtualizedContainerService.HintSize="2052,8754" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_17" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Считывание данных Due To Arrival" sap:VirtualizedContainerService.HintSize="2018,7935" sap2010:WorkflowViewState.IdRef="Sequence_141">
+            <Sequence DisplayName="Считывание данных Due To Arrival" sap:VirtualizedContainerService.HintSize="2018,8645" sap2010:WorkflowViewState.IdRef="Sequence_141">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3950,13 +3917,13 @@
                   </InArgument>
                 </ui:ExcelReadRange.Range>
               </ui:ExcelReadRange>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1976,7744" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_16" WorkbookPath="[File_Naming]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1976,8454" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_16" WorkbookPath="[File_Naming]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1942,7635" sap2010:WorkflowViewState.IdRef="Sequence_140">
+                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1942,8345" sap2010:WorkflowViewState.IdRef="Sequence_140">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3985,13 +3952,13 @@
                           <InArgument x:TypeArguments="x:Int32">2</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DueToArr]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1900,7244" sap2010:WorkflowViewState.IdRef="ForEachRow_15">
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DueToArr]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1900,7954" sap2010:WorkflowViewState.IdRef="ForEachRow_15">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1850,7096" sap2010:WorkflowViewState.IdRef="Sequence_139">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1850,7806" sap2010:WorkflowViewState.IdRef="Sequence_139">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="CheckNew" />
                               </Sequence.Variables>
@@ -4016,6 +3983,71 @@
                                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <If Condition="[Unique_Dictionary.Keys.Contains(row(&quot;Imo&quot;))]" DisplayName="Проверка ключа в словаре суммы" sap:VirtualizedContainerService.HintSize="1808,670" sap2010:WorkflowViewState.IdRef="If_110">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="478,521" sap2010:WorkflowViewState.IdRef="Sequence_339">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,229" sap2010:WorkflowViewState.IdRef="CommentOut_64">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_338">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_91" Text="[&quot;Запись уже есть =&gt; Обновляем&quot;]" />
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
+                                    <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_256">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[Checker_Dict_Vessel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_257">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[Cheker_Dict_Writes]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[CInt(Unique_Dictionary(row("Imo").ToString))]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,351" sap2010:WorkflowViewState.IdRef="Sequence_340">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_92" Text="[&quot;Записи нет в сумме =&gt; Создаем новую&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_258">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[Checker_Dict_Vessel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_259">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[Cheker_Dict_Writes]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
                               <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[SummaryData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1808,4523" sap2010:WorkflowViewState.IdRef="ForEachRow_14">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
@@ -4028,7 +4060,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[row(&quot;Imo&quot;).ToString = prev(&quot;Imo&quot;).ToString and row(&quot;Port&quot;).ToString = prev(&quot;Порт&quot;).ToString and CInt(Unique_Dictionary(row(&quot;Imo&quot;)).ToString) &gt; 0]" sap:VirtualizedContainerService.HintSize="1716,4283" sap2010:WorkflowViewState.IdRef="If_21">
+                                      <If Condition="[row(&quot;Imo&quot;).ToString = prev(&quot;Imo&quot;).ToString and row(&quot;Port&quot;).ToString = prev(&quot;Порт&quot;).ToString and (Checker_Dict_Vessel = True and Cheker_Dict_Writes &gt; 0)]" sap:VirtualizedContainerService.HintSize="1716,4283" sap2010:WorkflowViewState.IdRef="If_21">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="1409,4134" sap2010:WorkflowViewState.IdRef="Sequence_297">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -4447,7 +4479,7 @@
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
     </Sequence>
-    <Sequence DisplayName="LOADING COMPLETED TEMPLATE" sap:VirtualizedContainerService.HintSize="3404,9982" sap2010:WorkflowViewState.IdRef="Sequence_151">
+    <Sequence DisplayName="LOADING COMPLETED TEMPLATE" sap:VirtualizedContainerService.HintSize="3404,10692" sap2010:WorkflowViewState.IdRef="Sequence_151">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="DueToArr" />
         <Variable x:TypeArguments="x:Int32" Name="SumLine" />
@@ -4470,13 +4502,13 @@
         </Assign.Value>
       </Assign>
       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="3156,59" sap2010:WorkflowViewState.IdRef="MessageBox_63" Text="[&quot;Обработка задания LOADING COMPLETED&quot;]" />
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Открытие сформированного документа из Lineup" sap:VirtualizedContainerService.HintSize="3156,9691" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_19" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Открытие сформированного документа из Lineup" sap:VirtualizedContainerService.HintSize="3156,10401" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_19" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Считывание данных Due To Arrival" sap:VirtualizedContainerService.HintSize="3122,9582" sap2010:WorkflowViewState.IdRef="Sequence_150">
+            <Sequence DisplayName="Считывание данных Due To Arrival" sap:VirtualizedContainerService.HintSize="3122,10292" sap2010:WorkflowViewState.IdRef="Sequence_150">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4489,13 +4521,13 @@
                   </InArgument>
                 </ui:ExcelReadRange.Range>
               </ui:ExcelReadRange>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="3080,9391" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_18" WorkbookPath="[File_Naming]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="3080,10101" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_18" WorkbookPath="[File_Naming]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="3046,9282" sap2010:WorkflowViewState.IdRef="Sequence_149">
+                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="3046,9992" sap2010:WorkflowViewState.IdRef="Sequence_149">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4524,13 +4556,13 @@
                           <InArgument x:TypeArguments="x:Int32">2</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DueToArr]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="3004,8891" sap2010:WorkflowViewState.IdRef="ForEachRow_17">
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DueToArr]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="3004,9601" sap2010:WorkflowViewState.IdRef="ForEachRow_17">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2954,8743" sap2010:WorkflowViewState.IdRef="Sequence_148">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2954,9453" sap2010:WorkflowViewState.IdRef="Sequence_148">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="CheckNew" />
                               </Sequence.Variables>
@@ -4555,6 +4587,71 @@
                                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                                 </Assign.Value>
                               </Assign>
+                              <If Condition="[Unique_Dictionary.Keys.Contains(row(&quot;Imo&quot;))]" DisplayName="Проверка ключа в словаре суммы" sap:VirtualizedContainerService.HintSize="2912,670" sap2010:WorkflowViewState.IdRef="If_111">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="478,521" sap2010:WorkflowViewState.IdRef="Sequence_342">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,229" sap2010:WorkflowViewState.IdRef="CommentOut_65">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_341">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_93" Text="[&quot;Запись уже есть =&gt; Обновляем&quot;]" />
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
+                                    <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_260">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[Checker_Dict_Vessel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_261">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[Cheker_Dict_Writes]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[CInt(Unique_Dictionary(row("Imo").ToString))]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,351" sap2010:WorkflowViewState.IdRef="Sequence_343">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_94" Text="[&quot;Записи нет в сумме =&gt; Создаем новую&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_262">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[Checker_Dict_Vessel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_263">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[Cheker_Dict_Writes]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
                               <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[SummaryData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2912,5916" sap2010:WorkflowViewState.IdRef="ForEachRow_16">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
@@ -4567,7 +4664,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[row(&quot;Imo&quot;).ToString = prev(&quot;Imo&quot;).ToString and row(&quot;Port&quot;).ToString = prev(&quot;Порт&quot;).ToString]" sap:VirtualizedContainerService.HintSize="2820,5676" sap2010:WorkflowViewState.IdRef="If_23">
+                                      <If Condition="[row(&quot;Imo&quot;).ToString = prev(&quot;Imo&quot;).ToString and row(&quot;Port&quot;).ToString = prev(&quot;Порт&quot;).ToString and (Checker_Dict_Vessel =True and Cheker_Dict_Writes &gt; 0)]" sap:VirtualizedContainerService.HintSize="2820,5676" sap2010:WorkflowViewState.IdRef="If_23">
                                         <If.Then>
                                           <Sequence sap:VirtualizedContainerService.HintSize="2471,5527" sap2010:WorkflowViewState.IdRef="Sequence_314">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -4795,7 +4892,7 @@
                                                       <OutArgument x:TypeArguments="x:String">[DateFromFile]</OutArgument>
                                                     </Assign.To>
                                                     <Assign.Value>
-                                                      <InArgument x:TypeArguments="x:String">[row("Started").ToString.Replace(".","/")]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String">[row("Completed").ToString.Replace(".","/")]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
                                                   <Assign sap:VirtualizedContainerService.HintSize="1150,60" sap2010:WorkflowViewState.IdRef="Assign_229">
@@ -5161,26 +5258,37 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="3404,409" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
-      <ui:ExcelApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="242,300" sap2010:WorkflowViewState.IdRef="Sequence_199">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelDeleteRange DisplayName="Очистка Loading Completed" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A2:O300" SheetName="Loading Completed" ShiftCells="False" ShiftOption="ShiftUp" />
-            <ui:ExcelDeleteRange DisplayName="Очистка Under Loading" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A2:O300" SheetName="Under Loading" ShiftCells="False" ShiftOption="ShiftUp" />
-            <ui:ExcelDeleteRange DisplayName="Очистка On Roads" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_3" Range="A2:O300" SheetName="On Roads" ShiftCells="False" ShiftOption="ShiftUp" />
-            <ui:ExcelDeleteRange DisplayName="Очистка Due To Arrival" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_4" Range="A2:O300" SheetName="Due To Arrival" ShiftCells="False" ShiftOption="ShiftUp" />
-          </Sequence>
-        </ActivityAction>
-      </ui:ExcelApplicationScope.Body>
-    </ui:ExcelApplicationScope>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3404,579" sap2010:WorkflowViewState.IdRef="CommentOut_66">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="476,501" sap2010:WorkflowViewState.IdRef="Sequence_344">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,409" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
+            <ui:ExcelApplicationScope.Body>
+              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="242,300" sap2010:WorkflowViewState.IdRef="Sequence_199">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelDeleteRange DisplayName="Очистка Loading Completed" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A2:O300" SheetName="Loading Completed" ShiftCells="False" ShiftOption="ShiftUp" />
+                  <ui:ExcelDeleteRange DisplayName="Очистка Under Loading" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A2:O300" SheetName="Under Loading" ShiftCells="False" ShiftOption="ShiftUp" />
+                  <ui:ExcelDeleteRange DisplayName="Очистка On Roads" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_3" Range="A2:O300" SheetName="On Roads" ShiftCells="False" ShiftOption="ShiftUp" />
+                  <ui:ExcelDeleteRange DisplayName="Очистка Due To Arrival" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_4" Range="A2:O300" SheetName="Due To Arrival" ShiftCells="False" ShiftOption="ShiftUp" />
+                </Sequence>
+              </ActivityAction>
+            </ui:ExcelApplicationScope.Body>
+          </ui:ExcelApplicationScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
     <Sequence DisplayName="Run PowerShell Script Clear" sap:VirtualizedContainerService.HintSize="3404,271" sap2010:WorkflowViewState.IdRef="Sequence_245">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="PsScript" />
