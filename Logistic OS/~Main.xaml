@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="3436,72449" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:maes="clr-namespace:Microsoft.Activities.Extensions.Statements;assembly=Microsoft.Activities.Extensions" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="3436,72372" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:maes="clr-namespace:Microsoft.Activities.Extensions.Statements;assembly=Microsoft.Activities.Extensions" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -74,7 +74,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Основной Движок Logistic OS" sap:VirtualizedContainerService.HintSize="3446,72384" sap2010:WorkflowViewState.IdRef="Sequence_122">
+  <Sequence DisplayName="Основной Движок Logistic OS" sap:VirtualizedContainerService.HintSize="3446,72307" sap2010:WorkflowViewState.IdRef="Sequence_122">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="TrimPort" />
       <Variable x:TypeArguments="x:String" Name="File_Naming" />
@@ -5040,37 +5040,43 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3404,579" sap2010:WorkflowViewState.IdRef="CommentOut_66">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="476,501" sap2010:WorkflowViewState.IdRef="Sequence_344">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,409" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
-            <ui:ExcelApplicationScope.Body>
-              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="242,300" sap2010:WorkflowViewState.IdRef="Sequence_199">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:ExcelDeleteRange DisplayName="Очистка Loading Completed" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A2:O300" SheetName="Loading Completed" ShiftCells="False" ShiftOption="ShiftUp" />
-                  <ui:ExcelDeleteRange DisplayName="Очистка Under Loading" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A2:O300" SheetName="Under Loading" ShiftCells="False" ShiftOption="ShiftUp" />
-                  <ui:ExcelDeleteRange DisplayName="Очистка On Roads" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_3" Range="A2:O300" SheetName="On Roads" ShiftCells="False" ShiftOption="ShiftUp" />
-                  <ui:ExcelDeleteRange DisplayName="Очистка Due To Arrival" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_4" Range="A2:O300" SheetName="Due To Arrival" ShiftCells="False" ShiftOption="ShiftUp" />
-                </Sequence>
-              </ActivityAction>
-            </ui:ExcelApplicationScope.Body>
-          </ui:ExcelApplicationScope>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Очистка файла LINEUP" sap:VirtualizedContainerService.HintSize="3404,409" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" WorkbookPath="C:\Logistic OS\Templates\TempLineUp.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="242,300" sap2010:WorkflowViewState.IdRef="Sequence_199">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelDeleteRange DisplayName="Очистка Loading Completed" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A2:O300" SheetName="Loading Completed" ShiftCells="False" ShiftOption="ShiftUp" />
+            <ui:ExcelDeleteRange DisplayName="Очистка Under Loading" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A2:O300" SheetName="Under Loading" ShiftCells="False" ShiftOption="ShiftUp" />
+            <ui:ExcelDeleteRange DisplayName="Очистка On Roads" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_3" Range="A2:O300" SheetName="On Roads" ShiftCells="False" ShiftOption="ShiftUp" />
+            <ui:ExcelDeleteRange DisplayName="Очистка Due To Arrival" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_4" Range="A2:O300" SheetName="Due To Arrival" ShiftCells="False" ShiftOption="ShiftUp" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Очистка файла LINEUP" sap:VirtualizedContainerService.HintSize="3404,223" WorkbookPath="C:\Logistic OS\Templates\Templates_config.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="242,114">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelDeleteRange DisplayName="Очистка словаря" sap:VirtualizedContainerService.HintSize="200,22" Range="A2:D300" SheetName="Unique" ShiftCells="False" ShiftOption="ShiftUp" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
     <Sequence DisplayName="Run PowerShell Script Clear" sap:VirtualizedContainerService.HintSize="3404,271" sap2010:WorkflowViewState.IdRef="Sequence_245">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="PsScript" />
@@ -5105,164 +5111,153 @@
       </If.Else>
     </If>
     <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;C:\Logistic OS\Archive\Summary_&quot;+ Month_Selector.ToString + &quot;_&quot;+ DateTime.Now.ToString(&quot;dd.MM&quot;) +&quot;.xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="3404,160" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="[File_Naming]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3404,3607" sap2010:WorkflowViewState.IdRef="CommentOut_45">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="1125,3529" sap2010:WorkflowViewState.IdRef="Sequence_262">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Outer_Baseline Body" sap:VirtualizedContainerService.HintSize="1083,3437" sap2010:WorkflowViewState.IdRef="Sequence_237">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="Volume" />
-            </Sequence.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Open Inner File" sap:VirtualizedContainerService.HintSize="1041,3345" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_22" WorkbookPath="[File_Naming]">
-              <ui:ExcelApplicationScope.Body>
-                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1007,3236" sap2010:WorkflowViewState.IdRef="Sequence_236">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="sd:DataTable" Name="Inner_OutData" />
-                      <Variable x:TypeArguments="x:Int32" Name="Start_Counter" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="965,60" sap2010:WorkflowViewState.IdRef="Assign_157">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Int32">[Start_Counter]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Int32">6</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelReadRange AddHeaders="True" DataTable="[Inner_OutData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="965,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_19" SheetName="ИТОГ">
-                      <ui:ExcelReadRange.Range>
-                        <InArgument x:TypeArguments="x:String">
-                          <Literal x:TypeArguments="x:String" Value="" />
-                        </InArgument>
-                      </ui:ExcelReadRange.Range>
-                    </ui:ExcelReadRange>
-                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Open External Base" sap:VirtualizedContainerService.HintSize="965,2945" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_21" WorkbookPath="C:\Logistic OS\Main_Files\Outer_BaseLineVTB.xlsx">
-                      <ui:ExcelApplicationScope.Body>
-                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="931,2836" sap2010:WorkflowViewState.IdRef="Sequence_235">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Inner_OutData]" DisplayName="FOR Inner Base" sap:VirtualizedContainerService.HintSize="889,2744" sap2010:WorkflowViewState.IdRef="ForEachRow_19">
-                              <ui:ForEachRow.Body>
-                                <ActivityAction x:TypeArguments="sd:DataRow">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="cell" />
-                                  </ActivityAction.Argument>
-                                  <Sequence DisplayName="Write Into External Base" sap:VirtualizedContainerService.HintSize="839,2596" sap2010:WorkflowViewState.IdRef="Sequence_234">
+    <Sequence DisplayName="Outer_Baseline Body" sap:VirtualizedContainerService.HintSize="3404,3437" sap2010:WorkflowViewState.IdRef="Sequence_237">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="Volume" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Open Inner File" sap:VirtualizedContainerService.HintSize="1041,3345" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_22" WorkbookPath="[File_Naming]">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1007,3236" sap2010:WorkflowViewState.IdRef="Sequence_236">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="Inner_OutData" />
+                <Variable x:TypeArguments="x:Int32" Name="Start_Counter" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="965,60" sap2010:WorkflowViewState.IdRef="Assign_157">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[Start_Counter]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">6</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[Inner_OutData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="965,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_19" SheetName="ИТОГ">
+                <ui:ExcelReadRange.Range>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:ExcelReadRange.Range>
+              </ui:ExcelReadRange>
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Open External Base" sap:VirtualizedContainerService.HintSize="965,2945" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_21" WorkbookPath="C:\Logistic OS\Main_Files\Outer_BaseLineVTB.xlsx">
+                <ui:ExcelApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="931,2836" sap2010:WorkflowViewState.IdRef="Sequence_235">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Inner_OutData]" DisplayName="FOR Inner Base" sap:VirtualizedContainerService.HintSize="889,2744" sap2010:WorkflowViewState.IdRef="ForEachRow_19">
+                        <ui:ForEachRow.Body>
+                          <ActivityAction x:TypeArguments="sd:DataRow">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="cell" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Write Into External Base" sap:VirtualizedContainerService.HintSize="839,2596" sap2010:WorkflowViewState.IdRef="Sequence_234">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:ExcelWriteCell Cell="[&quot;E&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_199" SheetName="data" Text="[cell(&quot;IMO&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;G&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_200" SheetName="data" Text="[cell(&quot;Судно&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;H&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_201" SheetName="data" Text="[cell(&quot;Eta_Start&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;I&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_202" SheetName="data" Text="[cell(&quot;Eta_end&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;J&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_203" SheetName="data" Text="[cell(&quot;ETB&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;K&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_204" SheetName="data" Text="[cell(&quot;ETD&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;M&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_205" SheetName="data" Text="[cell(&quot;Товар&quot;).ToString]" />
+                              <If Condition="[not cell(&quot;Страна назначения&quot;).ToString = &quot;N&quot;]" sap:VirtualizedContainerService.HintSize="797,236" sap2010:WorkflowViewState.IdRef="If_63">
+                                <If.Then>
+                                  <ui:ExcelWriteCell Cell="[&quot;Y&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_206" SheetName="data" Text="[cell(&quot;Страна назначения&quot;).ToString]" />
+                                </If.Then>
+                                <If.Else>
+                                  <ui:ExcelWriteCell Cell="[&quot;Y&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_207" SheetName="data" Text="unknown" />
+                                </If.Else>
+                              </If>
+                              <ui:ExcelWriteCell Cell="[&quot;O&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_208" SheetName="data" Text="[cell(&quot;Вес (тонн)&quot;).ToString.Split(Convert.ToChar(&quot;,&quot;))(0).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;R&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_209" SheetName="data" Text="[cell(&quot;Причал&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;S&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_210" SheetName="data" Text="[cell(&quot;№Причал&quot;).ToString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;S&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_211" SheetName="data" Text="[cell(&quot;№Причал&quot;).ToString]" />
+                              <If Condition="[not cell(&quot;Порт назначения&quot;).ToString = &quot;N&quot;]" sap:VirtualizedContainerService.HintSize="797,328" sap2010:WorkflowViewState.IdRef="If_64">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_238">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExcelWriteCell Cell="[&quot;E&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_199" SheetName="data" Text="[cell(&quot;IMO&quot;).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;G&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_200" SheetName="data" Text="[cell(&quot;Судно&quot;).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;H&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_201" SheetName="data" Text="[cell(&quot;Eta_Start&quot;).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;I&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_202" SheetName="data" Text="[cell(&quot;Eta_end&quot;).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;J&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_203" SheetName="data" Text="[cell(&quot;ETB&quot;).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;K&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_204" SheetName="data" Text="[cell(&quot;ETD&quot;).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;M&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_205" SheetName="data" Text="[cell(&quot;Товар&quot;).ToString]" />
-                                    <If Condition="[not cell(&quot;Страна назначения&quot;).ToString = &quot;N&quot;]" sap:VirtualizedContainerService.HintSize="797,236" sap2010:WorkflowViewState.IdRef="If_63">
-                                      <If.Then>
-                                        <ui:ExcelWriteCell Cell="[&quot;Y&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_206" SheetName="data" Text="[cell(&quot;Страна назначения&quot;).ToString]" />
-                                      </If.Then>
-                                      <If.Else>
-                                        <ui:ExcelWriteCell Cell="[&quot;Y&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_207" SheetName="data" Text="unknown" />
-                                      </If.Else>
-                                    </If>
-                                    <ui:ExcelWriteCell Cell="[&quot;O&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_208" SheetName="data" Text="[cell(&quot;Вес (тонн)&quot;).ToString.Split(Convert.ToChar(&quot;,&quot;))(0).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;R&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_209" SheetName="data" Text="[cell(&quot;Причал&quot;).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;S&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_210" SheetName="data" Text="[cell(&quot;№Причал&quot;).ToString]" />
-                                    <ui:ExcelWriteCell Cell="[&quot;S&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_211" SheetName="data" Text="[cell(&quot;№Причал&quot;).ToString]" />
-                                    <If Condition="[not cell(&quot;Порт назначения&quot;).ToString = &quot;N&quot;]" sap:VirtualizedContainerService.HintSize="797,328" sap2010:WorkflowViewState.IdRef="If_64">
-                                      <If.Then>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_238">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ExcelWriteCell Cell="[&quot;AA&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_212" SheetName="data" Text="[cell(&quot;Порт назначения&quot;).ToString]" />
-                                        </Sequence>
-                                      </If.Then>
-                                      <If.Else>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_239">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ExcelWriteCell Cell="[&quot;AA&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_213" SheetName="data">
-                                            <ui:ExcelWriteCell.Text>
-                                              <InArgument x:TypeArguments="x:String">
-                                                <Literal x:TypeArguments="x:String" Value="" />
-                                              </InArgument>
-                                            </ui:ExcelWriteCell.Text>
-                                          </ui:ExcelWriteCell>
-                                        </Sequence>
-                                      </If.Else>
-                                    </If>
-                                    <If Condition="[not cell(&quot;in English&quot;).ToString.Equals(&quot;&quot;) or not cell(&quot;in English&quot;).ToString.Equals(&quot;N&quot;)]" sap:VirtualizedContainerService.HintSize="797,236" sap2010:WorkflowViewState.IdRef="If_65">
-                                      <If.Then>
-                                        <ui:ExcelWriteCell Cell="[&quot;T&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_214" SheetName="data" Text="[cell(&quot;in English&quot;).ToString]" />
-                                      </If.Then>
-                                      <If.Else>
-                                        <ui:ExcelWriteCell Cell="[&quot;T&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_215" SheetName="data">
-                                          <ui:ExcelWriteCell.Text>
-                                            <InArgument x:TypeArguments="x:String">
-                                              <Literal x:TypeArguments="x:String" Value="" />
-                                            </InArgument>
-                                          </ui:ExcelWriteCell.Text>
-                                        </ui:ExcelWriteCell>
-                                      </If.Else>
-                                    </If>
-                                    <ui:ExcelWriteCell Cell="[&quot;P&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_216" SheetName="data" Text="[cell(&quot;№Причал&quot;).ToString]" />
-                                    <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_158">
-                                      <Assign.To>
-                                        <OutArgument x:TypeArguments="x:Int32">[Start_Counter]</OutArgument>
-                                      </Assign.To>
-                                      <Assign.Value>
-                                        <InArgument x:TypeArguments="x:Int32">[Start_Counter+1]</InArgument>
-                                      </Assign.Value>
-                                    </Assign>
+                                    <ui:ExcelWriteCell Cell="[&quot;AA&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_212" SheetName="data" Text="[cell(&quot;Порт назначения&quot;).ToString]" />
                                   </Sequence>
-                                </ActivityAction>
-                              </ui:ForEachRow.Body>
-                            </ui:ForEachRow>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:ExcelApplicationScope.Body>
-                    </ui:ExcelApplicationScope>
-                  </Sequence>
-                </ActivityAction>
-              </ui:ExcelApplicationScope.Body>
-            </ui:ExcelApplicationScope>
-          </Sequence>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_239">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ExcelWriteCell Cell="[&quot;AA&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_213" SheetName="data">
+                                      <ui:ExcelWriteCell.Text>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </ui:ExcelWriteCell.Text>
+                                    </ui:ExcelWriteCell>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <If Condition="[not cell(&quot;in English&quot;).ToString.Equals(&quot;&quot;) or not cell(&quot;in English&quot;).ToString.Equals(&quot;N&quot;)]" sap:VirtualizedContainerService.HintSize="797,236" sap2010:WorkflowViewState.IdRef="If_65">
+                                <If.Then>
+                                  <ui:ExcelWriteCell Cell="[&quot;T&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_214" SheetName="data" Text="[cell(&quot;in English&quot;).ToString]" />
+                                </If.Then>
+                                <If.Else>
+                                  <ui:ExcelWriteCell Cell="[&quot;T&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_215" SheetName="data">
+                                    <ui:ExcelWriteCell.Text>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <Literal x:TypeArguments="x:String" Value="" />
+                                      </InArgument>
+                                    </ui:ExcelWriteCell.Text>
+                                  </ui:ExcelWriteCell>
+                                </If.Else>
+                              </If>
+                              <ui:ExcelWriteCell Cell="[&quot;P&quot; + Start_Counter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_216" SheetName="data" Text="[cell(&quot;№Причал&quot;).ToString]" />
+                              <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_158">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[Start_Counter]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[Start_Counter+1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEachRow.Body>
+                      </ui:ForEachRow>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ExcelApplicationScope.Body>
+              </ui:ExcelApplicationScope>
+            </Sequence>
+          </ActivityAction>
+        </ui:ExcelApplicationScope.Body>
+      </ui:ExcelApplicationScope>
+    </Sequence>
     <Sequence DisplayName="Run PowerShell Script Clear" sap:VirtualizedContainerService.HintSize="3404,271" sap2010:WorkflowViewState.IdRef="Sequence_244">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="PsScript" />
