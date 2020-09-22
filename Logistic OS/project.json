@@ -3,6 +3,7 @@
   "description": "Выгрузка в таблицу EXCEL данных по Портам",
   "main": "Main.xaml",
   "dependencies": {
+    "Microsoft.Activities": "[1.0.1]",
     "Microsoft.Activities.Extensions": "[2.0.6.9]",
     "UiPath.Excel.Activities": "[2.9.0-preview]",
     "UiPath.Mail.Activities": "[1.9.0-preview]",
@@ -13,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.6.0.0",
-  "projectVersion": "1.1.1",
+  "projectVersion": "1.2.3",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -45,5 +46,7 @@
     "output": []
   },
   "expressionLanguage": "VisualBasic",
-  "isTemplate": false
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {}
 }
