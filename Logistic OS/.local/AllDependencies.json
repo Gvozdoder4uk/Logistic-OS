@@ -1860,9 +1860,9 @@
     "restore": {
       "projectUniqueName": "Logistic OS",
       "projectName": "Logistic OS",
-      "projectPath": "D:\\[Programming]\\[Uipath]\\Logistic-OS\\Logistic OS\\.local",
+      "projectPath": "C:\\[PROJECTS]\\Logistic-OS\\Logistic OS\\.local",
       "packagesPath": "C:\\Users\\Gvozdoder\\.nuget\\packages\\",
-      "outputPath": "D:\\[Programming]\\[Uipath]\\Logistic-OS\\Logistic OS\\.local"
+      "outputPath": "C:\\[PROJECTS]\\Logistic-OS\\Logistic OS\\.local"
     },
     "frameworks": {
       "net461": {

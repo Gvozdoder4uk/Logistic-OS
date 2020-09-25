@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.6.0.0",
-  "projectVersion": "1.2.3",
+  "projectVersion": "1.2.5",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -40,10 +40,6 @@
     },
     "fileInfoCollection": [],
     "modernBehavior": false
-  },
-  "arguments": {
-    "input": [],
-    "output": []
   },
   "expressionLanguage": "VisualBasic",
   "isTemplate": false,
